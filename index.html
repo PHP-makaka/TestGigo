@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Demo - The Web's Sixth Sense: A Study of Scripts Accessing Smartphone Sensors</title>
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>JavaScript Sensor Access Demo</title>
     <style>
         #demo-div {color: lightgrey; border-radius: 0.3rem;}
@@ -37,6 +37,11 @@
             <li>Y-axis (&gamma;): <span id="Orientation_g">0</span><span>&deg;</span></li>
             <li>Z-axis (&alpha;): <span id="Orientation_a">0</span><span>&deg;</span></li>
         </ul>
+
+
+        <div class="button-red"id="button-red">
+            СЫЧ
+        </div>
 
 <!--        <h4>Accelerometer</h4>-->
 <!--        <ul>-->
@@ -86,24 +91,28 @@
 
     function updateFieldIfNotNull(fieldName, value, precision=10){
         if (value != null)
+
+            // document.getElementById("button-red").style.left+= `${value.toFixed(precision)}px`
+
             document.getElementById(fieldName).innerHTML = value.toFixed(precision);
+
     }
 
 
     function handleMotion(event) {
-        updateFieldIfNotNull('Accelerometer_gx', event.accelerationIncludingGravity.x);
-        updateFieldIfNotNull('Accelerometer_gy', event.accelerationIncludingGravity.y);
-        updateFieldIfNotNull('Accelerometer_gz', event.accelerationIncludingGravity.z);
-
-        updateFieldIfNotNull('Accelerometer_x', event.acceleration.x);
-        updateFieldIfNotNull('Accelerometer_y', event.acceleration.y);
-        updateFieldIfNotNull('Accelerometer_z', event.acceleration.z);
-
-        updateFieldIfNotNull('Accelerometer_i', event.interval, 2);
-
-        updateFieldIfNotNull('Gyroscope_z', event.rotationRate.alpha);
-        updateFieldIfNotNull('Gyroscope_x', event.rotationRate.beta);
-        updateFieldIfNotNull('Gyroscope_y', event.rotationRate.gamma);
+        // updateFieldIfNotNull('Accelerometer_gx', event.accelerationIncludingGravity.x);
+        // updateFieldIfNotNull('Accelerometer_gy', event.accelerationIncludingGravity.y);
+        // updateFieldIfNotNull('Accelerometer_gz', event.accelerationIncludingGravity.z);
+        //
+        // updateFieldIfNotNull('Accelerometer_x', event.acceleration.x);
+        // updateFieldIfNotNull('Accelerometer_y', event.acceleration.y);
+        // updateFieldIfNotNull('Accelerometer_z', event.acceleration.z);
+        //
+        // updateFieldIfNotNull('Accelerometer_i', event.interval, 2);
+        //
+        // updateFieldIfNotNull('Gyroscope_z', event.rotationRate.alpha);
+        // updateFieldIfNotNull('Gyroscope_x', event.rotationRate.beta);
+        // updateFieldIfNotNull('Gyroscope_y', event.rotationRate.gamma);
         incrementEventCount();
     }
 
