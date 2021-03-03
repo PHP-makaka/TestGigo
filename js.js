@@ -6,3 +6,4 @@ function orientation(event) {
  console.log("!!1"+x) 
 alert(x,y)
 }
+ console.log("!!1") 
