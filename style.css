@@ -1,9 +1,10 @@
 
 .back{
+    margin: 0;
+    padding:0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: black;
-    color: white;
     top:0;
     left: 0;
     opacity: 1;
@@ -14,8 +15,9 @@
 #start_demo{
     position: relative;
     z-index: 2;
+    background-color: white;
+    padding: 10px;
 }
-
 .button-red{
     line-height:50px;
     width: 50px;
