@@ -38,7 +38,9 @@
             <li>Z-axis (&alpha;): <span id="Orientation_a">0</span><span>&deg;</span></li>
         </ul>
 
-
+        <div class="back">
+            hel
+        </div>
         <div class="button-red"id="button-red">
             centerdWWWWW
         </div>
@@ -96,8 +98,8 @@ let red = document.getElementById("button-red")
     function updateFieldIfNotNull(fieldName, value, precision=2){
         if (value != null)
             if (fieldName=="Orientation_b") {
-                let y = value.toFixed(precision)
-                red.style.top= `${y/2-50}px`
+                // let y = value.toFixed(precision)
+                red.style.top= `${value+(y/2)-50}px`
 
             }else if (fieldName=="Orientation_g") {
                 red.style.left= `${value+(x/2)-50}px`
