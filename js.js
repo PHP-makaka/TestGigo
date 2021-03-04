@@ -2,7 +2,18 @@
 // console.log(document.documentElement.clientWidth)
 var y = innerHeight;
 var x = innerWidth
+
 alert("wwxs")
+let red = document.getElementById("button-red")
+let count = 10;
+
+moveRed()
+
+function moveRed(){
+    red.style.top= count+"px"
+    count+=10
+    return setTimeout(moveRed,100)
+}
     function handleOrientation(event) {
         // updateFieldIfNotNull('Orientation_a', event.alpha);
         updateFieldIfNotNull('Orientation_b', event.beta);
@@ -15,7 +26,6 @@ alert("wwxs")
         let eventCount = parseInt(counterElement.innerHTML)
         counterElement.innerHTML = eventCount + 1;
     }
-let red = document.getElementById("button-red")
     function updateFieldIfNotNull(fieldName, value, precision=2){
         if (value != null)
             if (fieldName=="Orientation_b") {
@@ -48,6 +58,7 @@ let red = document.getElementById("button-red")
 
     let is_running = false;
     let demo_button = document.getElementById("start_demo");
+
     demo_button.onclick = function(e) {
         e.preventDefault();
 
