@@ -7,21 +7,46 @@ alert("wwxs")
 let red = document.getElementById("button-red")
 let fuck = document.getElementById("fuck")
 let count = 10;
-let time = 250
+let time = 150
+
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
 moveRed()
 
 function moveRed(){
     fuck.style.top= count+"px"
     count+=10
+    testOn()
     if (count+50>y) {
         count = 0
-        time-=50 
+        time-=10 
+        fuck.style.left = getRandomInt(x)+"px"
         return setTimeout(moveRed,time)
     }else{
+
         return setTimeout(moveRed,time)
     }
 }
+    
+function testOn(){
+// for(let i=0; i<poz_box_shit.length; i++){
+    let left_P = red.offsetLeft;
+    let top_P = red.offsetTop;
+    let left_P_Shit = fuck.offsetLeft;
+    let top_P_Shit = fuck.offsetTop;
+        if( ((left_P > left_P_Shit && left_P < left_P_Shit+20) && (top_P>top_P_Shit && top_P<top_P_Shit+20))||
+            ((left_P+50 > left_P_Shit && left_P+50 < left_P_Shit+20) && (top_P+50>top_P_Shit && top_P+50<top_P_Shit+20))||
+            ((left_P+50 > left_P_Shit && left_P< left_P_Shit+20) && (top_P+50>top_P_Shit && top_P<top_P_Shit+20))
+            ){
+            alert('проиграл!');
+            location.reload();
+            }
+    // }
+}
+
     function handleOrientation(event) {
         // updateFieldIfNotNull('Orientation_a', event.alpha);
         updateFieldIfNotNull('Orientation_b', event.beta);
