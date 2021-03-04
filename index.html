@@ -40,7 +40,7 @@
 
 
         <div class="button-red"id="button-red">
-            Hell
+            centerdd!
         </div>
 
 <!--        <h4>Accelerometer</h4>-->
@@ -75,7 +75,10 @@
 <!--    </div>-->
 <!--</footer>-->
 <script>
-
+    // alert(document.documentElement.clientHeight)
+// console.log(document.documentElement.clientWidth)
+var y = document.documentElement.clientHeight;
+var x = document.documentElement.clientWidth
     function handleOrientation(event) {
         // updateFieldIfNotNull('Orientation_a', event.alpha);
         updateFieldIfNotNull('Orientation_b', event.beta);
@@ -93,10 +96,10 @@ let red = document.getElementById("button-red")
         if (value != null)
             if (fieldName=="Orientation_b") {
                 let y = value.toFixed(precision)
-                red.style.top= `${value+200}px`
+                red.style.top= `${value+(y/2+50)}px`
 
             }else if (fieldName=="Orientation_g") {
-                red.style.left= `${value.toFixed(precision)}px`
+                red.style.left= `${value+(x/2+50)}px`
             }
 
             document.getElementById(fieldName).innerHTML = value.toFixed(precision)+"22";

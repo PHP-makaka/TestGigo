@@ -9,5 +9,6 @@
     border-radius: 20px;
     opacity: 0.6;
     position: absolute;
+    text-align: center;
     z-index: 1;
 }
