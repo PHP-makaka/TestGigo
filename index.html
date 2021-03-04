@@ -92,10 +92,11 @@ let red = document.getElementById("button-red")
     function updateFieldIfNotNull(fieldName, value, precision=2){
         if (value != null)
             if (fieldName=="Orientation_b") {
-                red.style.top+= `${value.toFixed(precision)}px`
+                let y = value.toFixed(precision)
+                red.style.top= `${y+100}px`
 
             }else if (fieldName=="Orientation_g") {
-                red.style.left+= `${value.toFixed(precision)}px`
+                red.style.left= `${value.toFixed(precision)}px`
             }
 
             document.getElementById(fieldName).innerHTML = value.toFixed(precision);
