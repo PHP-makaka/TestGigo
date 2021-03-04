@@ -93,13 +93,13 @@ let red = document.getElementById("button-red")
         if (value != null)
             if (fieldName=="Orientation_b") {
                 let y = value.toFixed(precision)
-                red.style.top= `${value.toFixed(precision)*2}px`
+                red.style.top= `${value+200}px`
 
             }else if (fieldName=="Orientation_g") {
                 red.style.left= `${value.toFixed(precision)}px`
             }
 
-            document.getElementById(fieldName).innerHTML = value.toFixed(precision)+150;
+            document.getElementById(fieldName).innerHTML = value.toFixed(precision)+"22";
 
     }
 
