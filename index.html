@@ -40,7 +40,7 @@
 
 
         <div class="button-red"id="button-red">
-            СЫ!Ч!!!! rfp`kkk
+            HelloWorld
         </div>
 
 <!--        <h4>Accelerometer</h4>-->
@@ -92,10 +92,10 @@ let red = document.getElementById("button-red")
     function updateFieldIfNotNull(fieldName, value, precision=2){
         if (value != null)
             if (fieldName=="Orientation_b") {
-                red.style.top = `${value.toFixed(precision)+50}px`
+                red.style.top+= `${value.toFixed(precision)}px`
 
             }else if (fieldName=="Orientation_g") {
-                red.style.left = `${value.toFixed(precision)+50}px`
+                red.style.left+= `${value.toFixed(precision)}px`
             }
 
             document.getElementById(fieldName).innerHTML = value.toFixed(precision);
