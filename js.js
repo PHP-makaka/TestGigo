@@ -5,14 +5,22 @@ var x = innerWidth
 
 alert("wwxs")
 let red = document.getElementById("button-red")
+let fuck = document.getElementById("fuck")
 let count = 10;
+let time = 250
 
 moveRed()
 
 function moveRed(){
-    red.style.top= count+"px"
+    fuck.style.top= count+"px"
     count+=10
-    return setTimeout(moveRed,100)
+    if (count+50>y) {
+        count = 0
+        time-=50 
+        return setTimeout(moveRed,time)
+    }else{
+        return setTimeout(moveRed,time)
+    }
 }
     function handleOrientation(event) {
         // updateFieldIfNotNull('Orientation_a', event.alpha);
