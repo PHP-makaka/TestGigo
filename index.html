@@ -40,7 +40,7 @@
 
 
         <div class="button-red"id="button-red">
-            centerdd!
+            centerdd!-500
         </div>
 
 <!--        <h4>Accelerometer</h4>-->
@@ -96,10 +96,10 @@ let red = document.getElementById("button-red")
         if (value != null)
             if (fieldName=="Orientation_b") {
                 let y = value.toFixed(precision)
-                red.style.top= `${value+(x/2+50)}px`
+                red.style.top= `${value+(y/2-50)}px`
 
             }else if (fieldName=="Orientation_g") {
-                red.style.left= `${value+(y/2+50)}px`
+                red.style.left= `${value+(x/2-50)}px`
             }
 
             document.getElementById(fieldName).innerHTML = value.toFixed(precision)+"22";
