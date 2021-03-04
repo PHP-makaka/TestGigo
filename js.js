@@ -4,7 +4,7 @@ var y = innerHeight;
 var x = innerWidth
 
 
-alert("wwxs")
+alert("Управляй телефоном! Не дай Сачу попать в Чехию!!!")
 let red = document.getElementById("button-red")
 let fuck = document.getElementById("fuck")
 let fuck2 = document.getElementById("fuck2")
@@ -18,7 +18,6 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-moveRed()
 
 function moveRed(){
     fuck.style.top= count+"px"
@@ -105,6 +104,7 @@ function testOn(elem){
 
     demo_button.onclick = function(e) {
         e.preventDefault();
+        moveRed()
 
         // Request permission for iOS 13+ devices
         if (
